@@ -12,7 +12,7 @@ async def get_url(url):
     db_client = AsyncIOMotorClient(config.mongo_url)
     db = db_client[config.database]
 
-    api_user = await auth.create_api_user(db, '4play')
+    api_user = await auth.create_api_user(db, 'mdn')
 
     print('key: %s' % api_user['api_key'])
     print('secret: %s' % api_user['api_secret'])
